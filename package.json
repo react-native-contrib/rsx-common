@@ -1,0 +1,26 @@
+{
+  "name": "rsx-common",
+  "version": "0.1.0",
+  "description": "Common utility functions for the RSX CLI utility",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/react-native-contrib/rsx-common.git"
+  },
+  "author": "Hassan Khan <contact@hassankhan.me>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/react-native-contrib/rsx-common/issues"
+  },
+  "homepage": "https://github.com/react-native-contrib/rsx-common#readme",
+  "dependencies": {
+    "npmlog": "^2.0.2"
+  },
+  "devDependencies": {
+    "babel-eslint": "^4.1.5",
+    "eslint": "^1.9.0"
+  }
+}
