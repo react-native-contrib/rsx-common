@@ -1,4 +1,5 @@
 const log = require('npmlog');
+const chalk = require('chalk');
 const path = require('path');
 const fs = require('fs');
 
@@ -24,6 +25,7 @@ const isPlugin = (dependency) => !!~dependency.indexOf('react-native-');
 
 module.exports = {
     log: log,
+    chalk: chalk,
     isPlugin: isPlugin,
     fileExists: fileExists,
     getProjectPackageJson: getProjectPackageJson
