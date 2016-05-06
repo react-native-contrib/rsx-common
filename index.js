@@ -35,5 +35,6 @@ module.exports = {
     isPlugin: isPlugin,
     isValidPackageName: isValidPackageName,
     fileExists: fileExists,
-    getProjectPackageJson: getProjectPackageJson
+    getProjectPackageJson: getProjectPackageJson,
+    makeCommand: require('./src/makeCommand')
 }
