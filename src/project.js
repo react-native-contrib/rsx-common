@@ -1,8 +1,11 @@
+const path = require('path');
+const log = require('npmlog');
+
 const getPackageJson = (folder) => {
     try {
         const pkg = require(path.join(folder, 'package.json'));
     } catch (e) {
-        console.error(e);
+        log.error(e);
         return [];
     }
 

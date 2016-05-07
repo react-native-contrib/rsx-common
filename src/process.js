@@ -1,6 +1,6 @@
 const spawn = require('child_process').spawn;
 
-const run = (command, callback) => {
+const run = (command) => {
   return (callback) => {
     if (!callback) {
       throw new Error(`You missed a callback function for the ${command} command`);
