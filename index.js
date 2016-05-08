@@ -5,4 +5,4 @@ module.exports = {
     process: require('./src/process'),
     project: require('./src/project'),
     validate: require('./src/validate'),
-}
+};
