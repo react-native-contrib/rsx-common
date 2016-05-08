@@ -1,13 +1,29 @@
 # rsx-common
 
-![rsx logo](http://react-native-contrib.github.io/rsx/images/logo.png)
-
-![npm version](https://img.shields.io/npm/v/rsx-common.svg)
-![dependencies](https://img.shields.io/david/react-native-contrib/rsx-common.svg)
-[![Code Climate](https://codeclimate.com/github/react-native-contrib/rsx-common/badges/gpa.svg)](https://codeclimate.com/github/react-native-contrib/rsx-common)
-[![Test Coverage](https://codeclimate.com/github/react-native-contrib/rsx-common/badges/coverage.svg)](https://codeclimate.com/github/react-native-contrib/rsx-common/coverage)
-[![Travis CI](https://img.shields.io/travis/react-native-contrib/rsx-common/master.svg)](https://travis-ci.org/react-native-contrib/rsx-common)
+[![npm version][ico-npm]][link-npm]
+[![License][ico-license]](LICENSE.md)
+[![Travis CI][ico-travis]][link-travis]
+[![Code Climate][ico-codeclimate]][link-codeclimate]
+[![Code Coverage][ico-code-coverage]][link-code-coverage]
+[![Dependencies][ico-dependencies]][link-dependencies]
 
 ## Documentation
 
 All documentation is available at this project's [GitHub pages](http://react-native-contrib.github.io/rsx/).
+
+## License
+
+The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+
+[ico-npm]: https://img.shields.io/npm/v/rsx-common.svg?style=flat-square
+[ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
+[ico-travis]: https://img.shields.io/travis/react-native-contrib/rsx-common/master.svg?style=flat-square
+[ico-codeclimate]: https://codeclimate.com/github/react-native-contrib/rsx-common/badges/gpa.svg?style=flat-square
+[ico-code-coverage]: https://codeclimate.com/github/react-native-contrib/rsx-common/badges/coverage.svg?style=flat-square
+[ico-dependencies]: https://img.shields.io/david/react-native-contrib/rsx-common.svg?style=flat-square
+
+[link-npm]: https://img.shields.io/packagist/v/react-native-contrib/rsx-common.svg?style=flat-square
+[link-travis]: https://travis-ci.org/react-native-contrib/rsx-common
+[link-codeclimate]: https://codeclimate.com/github/react-native-contrib/rsx-common
+[link-code-coverage]: https://codeclimate.com/github/react-native-contrib/rsx-common/coverage
+[link-dependencies]: https://img.shields.io/packagist/dt/react-native-contrib/rsx-common.svg?style=flat-square
