@@ -18,8 +18,8 @@ The MIT License (MIT). Please see [License File](LICENSE.md) for more informatio
 [ico-npm]: https://img.shields.io/npm/v/rsx-common.svg?style=flat-square
 [ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
 [ico-travis]: https://img.shields.io/travis/react-native-contrib/rsx-common/master.svg?style=flat-square
-[ico-codeclimate]: https://codeclimate.com/github/react-native-contrib/rsx-common/badges/gpa.svg?style=flat-square
-[ico-code-coverage]: https://codeclimate.com/github/react-native-contrib/rsx-common/badges/coverage.svg?style=flat-square
+[ico-codeclimate]: https://img.shields.io/codeclimate/github/react-native-contrib/rsx-common.svg?style=flat-square
+[ico-code-coverage]: https://img.shields.io/codeclimate/coverage/github/react-native-contrib/rsx-common.svg?style=flat-square
 [ico-dependencies]: https://img.shields.io/david/react-native-contrib/rsx-common.svg?style=flat-square
 
 [link-npm]: https://img.shields.io/packagist/v/react-native-contrib/rsx-common.svg?style=flat-square
