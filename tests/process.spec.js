@@ -1,13 +1,42 @@
 const chai = require('chai');
+const sinon = require('sinon');
+const mock = require('mock-require');
 const path = require('path');
-const processUtils = require('../src/process');
 
 const expect = chai.expect;
+var spawnError = false;
+mock('child_process', {
+    spawn: () => ({
+        on: (ev, cb) => cb(spawnError),
+    }),
+});
+
+const processUtils = require('../src/process');
 
 describe('process', () => {
 
     describe('#run', () => {
-        it('should run an external process');
+        const command = processUtils.run('echo');
+
+        it('should generate a function around shell command', () => {
+            expect(typeof command).to.deep.equals('function');
+        });
+
+        it('should throw an error if no callback was provided', () => {
+            expect(() => command()).to.throw('You missed a callback function');
+        });
+
+        it('should invoke a callback after command execution', () => {
+            const spy = sinon.spy();
+            command(spy);
+            expect(spy.callCount).to.equals(1);
+        });
+
+        it('should throw an error if spawn ended up with error', () => {
+            spawnError = true;
+            const spy = sinon.spy();
+            expect(() => command(cb)).to.throw();
+        });
     });
 
 });

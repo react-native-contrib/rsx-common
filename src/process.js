@@ -1,27 +1,27 @@
 const spawn = require('child_process').spawn;
 
 const run = (command) => {
-  return (callback) => {
-    if (!callback) {
-      throw new Error(`You missed a callback function for the ${command} command`);
-    }
+    return (callback) => {
+        if (!callback) {
+            throw new Error(`You missed a callback function for the ${command} command`);
+        }
 
-    const args = command.split(' ');
-    const cmd  = args.shift();
+        const args = command.split(' ');
+        const cmd  = args.shift();
 
-    const commandProcess = spawn(cmd, args, {
-      stdio: 'inherit',
-      stdin: 'inherit',
-    });
+        const commandProcess = spawn(cmd, args, {
+            stdio: 'inherit',
+            stdin: 'inherit',
+        });
 
-    commandProcess.on('close', function prelink(code) {
-      if (code) {
-        throw new Error(`Error occured while executing "${command}" command`);
-      }
+        commandProcess.on('close', function prelink(code) {
+            if (code) {
+                throw new Error(`Error occurred while executing "${command}" command`);
+            }
 
-      callback();
-    });
-  };
+            callback();
+        });
+    };
 };
 
 module.exports = {
