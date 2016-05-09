@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/react-native-contrib/rsx-common.git"
+    "url": "git+https://github.com/react-native-contrib/rsx-common.git"
   },
   "author": "Hassan Khan <contact@hassankhan.me>",
   "license": "MIT",
