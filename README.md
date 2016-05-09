@@ -22,8 +22,8 @@ The MIT License (MIT). Please see [License File](LICENSE.md) for more informatio
 [ico-code-coverage]: https://img.shields.io/codeclimate/coverage/github/react-native-contrib/rsx-common.svg?style=flat-square
 [ico-dependencies]: https://img.shields.io/david/react-native-contrib/rsx-common.svg?style=flat-square
 
-[link-npm]: https://img.shields.io/packagist/v/react-native-contrib/rsx-common.svg?style=flat-square
+[link-npm]: https://www.npmjs.com/package/rsx-common
 [link-travis]: https://travis-ci.org/react-native-contrib/rsx-common
 [link-codeclimate]: https://codeclimate.com/github/react-native-contrib/rsx-common
 [link-code-coverage]: https://codeclimate.com/github/react-native-contrib/rsx-common/coverage
-[link-dependencies]: https://img.shields.io/packagist/dt/react-native-contrib/rsx-common.svg?style=flat-square
+[link-dependencies]: https://david-dm.org/react-native-contrib/rsx-common
