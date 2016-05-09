@@ -4,7 +4,13 @@ const isPackageName = (name) => {
     : true;
 };
 
-const isPlugin = (dependency) => !!~dependency.indexOf('react-native-');
+const isPlugin = (dependency) => {
+    return !!~dependency.indexOf('react-native-');
+};
+
+const inProject = () => {
+    return process.cwd() === process.env.RN_PROJECT_ROOT;
+};
 
 module.exports = {
     isPackageName: isPackageName,
