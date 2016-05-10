@@ -1,8 +1,9 @@
 const chai = require('chai');
 const path = require('path');
-const pathUtils = require('../src/path');
 
 const expect = chai.expect;
+
+const pathUtils = require('../src/path');
 
 describe('path', () => {
 

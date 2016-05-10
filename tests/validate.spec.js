@@ -1,8 +1,9 @@
 const chai = require('chai');
 const path = require('path');
-const validateUtils = require('../src/validate');
 
 const expect = chai.expect;
+
+const validateUtils = require('../src/validate');
 
 describe('validate', () => {
 
