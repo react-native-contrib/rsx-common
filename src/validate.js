@@ -13,6 +13,7 @@ const inProject = () => {
 };
 
 module.exports = {
+    inProject: inProject,
     isPackageName: isPackageName,
     isPlugin: isPlugin,
 };

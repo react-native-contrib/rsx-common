@@ -44,7 +44,9 @@ describe('path', () => {
 
     describe('#getProjectFolderName', () => {
 
-        it('should get the project name');
+        it('should get the folder name', () => {
+            expect(pathUtils.getProjectFolderName(path.join(__dirname, '..'))).to.deep.equals('rsx-common');
+        });
 
     });
 

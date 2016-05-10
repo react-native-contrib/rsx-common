@@ -32,10 +32,17 @@ describe('process', () => {
             expect(spy.callCount).to.equals(1);
         });
 
+        it('should throw an error if process exited with a code');
+        // it('should throw an error if process exited with a code', () => {
+        //     const errorCommand = processUtils.run('sleep 10');
+        //     const spy = sinon.spy();
+        //     expect(() => errorCommand(spy)).to.throw('Error occurred while executing');
+        // });
+
         it('should throw an error if spawn ended up with error', () => {
             spawnError = true;
             const spy = sinon.spy();
-            expect(() => command(cb)).to.throw();
+            expect(() => command(spy)).to.throw();
         });
     });
 
