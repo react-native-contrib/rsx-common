@@ -42,4 +42,23 @@ describe('validate', () => {
 
     });
 
+    describe('#isProject', () => {
+
+        it('should return true for a valid React Native project', () => {
+            process.env.RN_PROJECT_ROOT = path.join(__dirname, 'fixtures', 'react-native-project');
+            expect(validateUtils.isProject()).to.deep.equals(true);
+        });
+
+        it('should return false for a Node project', () => {
+            process.env.RN_PROJECT_ROOT = path.join(__dirname, 'fixtures', 'node-project');
+            expect(validateUtils.isProject()).to.deep.equals(false);
+        });
+
+        it('should return false for anything else', () => {
+            process.env.RN_PROJECT_ROOT = path.join(__dirname);
+            expect(validateUtils.isProject()).to.deep.equals(false);
+        });
+
+    });
+
 });
