@@ -29,15 +29,7 @@ const inProject = () => {
     return process.cwd() === process.env.RN_PROJECT_ROOT;
 };
 
-const isIn = (haystack, needle, type) => {
-    if (Object.keys(haystack).indexOf(needle) === -1) {
-        throw Error(`${needle} is not a valid ${type} for this command`);
-    }
-    return true;
-};
-
 module.exports = {
-    isIn: isIn,
     inProject: inProject,
     isPackageName: isPackageName,
     isPlugin: isPlugin,
