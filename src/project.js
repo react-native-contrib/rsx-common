@@ -3,8 +3,15 @@
 const path = require('path');
 const log = require('npmlog');
 
+/**
+ * Retrieve the `package.json` file from the path provided by `folder`.
+ *
+ * @param  {String} folder
+ *
+ * @return {Object}
+ */
 const getPackageJson = (folder) => {
-    let pkg = [];
+    let pkg = {};
     try {
         pkg = require(path.join(folder, 'package.json'));
     } catch (e) {

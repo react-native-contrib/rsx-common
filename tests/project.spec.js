@@ -21,7 +21,7 @@ describe('project', () => {
 
         it('should return an empty array if no package file exists', () => {
             let nonprojectPath = path.join(__dirname, 'fixtures');
-            expect(projectUtils.getPackageJson(nonprojectPath)).to.deep.equals([]);
+            expect(projectUtils.getPackageJson(nonprojectPath)).to.deep.equals({});
         });
 
     });

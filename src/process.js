@@ -2,6 +2,15 @@
 
 let spawn = require('child_process').spawn;
 
+/**
+ * Runs `command` as a shell process. Optionally, options can be passed to the
+ * underlying `child_process.spawn()` command via `sArgs`.
+ *
+ * @param  {String} command
+ * @param  {Object} sArgs
+ *
+ * @return {Void}
+ */
 const run = (command, sArgs) => {
     const spawnArgs = sArgs || {stdio: 'inherit', stdin: 'inherit'};
 
