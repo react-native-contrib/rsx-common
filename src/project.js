@@ -1,12 +1,14 @@
+'use strict';
+
 const path = require('path');
 const log = require('npmlog');
 
 const getPackageJson = (folder) => {
+    let pkg = [];
     try {
-        const pkg = require(path.join(folder, 'package.json'));
+        pkg = require(path.join(folder, 'package.json'));
     } catch (e) {
         log.error(e);
-        return [];
     }
 
     return pkg;

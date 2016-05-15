@@ -1,4 +1,6 @@
-const spawn = require('child_process').spawn;
+'use strict';
+
+let spawn = require('child_process').spawn;
 
 const run = (command, sArgs) => {
     const spawnArgs = sArgs || {stdio: 'inherit', stdin: 'inherit'};

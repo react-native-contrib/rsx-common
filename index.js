@@ -1,3 +1,5 @@
+'use strict';
+
 module.exports = {
     _: require('lodash'),
     log: require('npmlog'),

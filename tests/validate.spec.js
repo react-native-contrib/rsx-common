@@ -1,3 +1,5 @@
+'use strict';
+
 const chai = require('chai');
 const path = require('path');
 
@@ -10,12 +12,12 @@ describe('validate', () => {
     describe('#isIn', () => {
 
         it('should return true if needle is in the haystack', () => {
-            const haystack = {"1": "foo", "2": "bar", "3": "baz"};
-            expect(validateUtils.isIn(haystack, "1", 'number')).to.deep.equals(true);
+            const haystack = {'1': 'foo', '2': 'bar', '3': 'baz'};
+            expect(validateUtils.isIn(haystack, '1', 'number')).to.deep.equals(true);
         });
 
         it('should throw an error if anything else', () => {
-            const haystack = {"1": "foo", "2": "bar", "3": "baz"};
+            const haystack = {'1': 'foo', '2': 'bar', '3': 'baz'};
             expect(() => validateUtils.isIn(haystack, 'potato', 'number')).to.throw('potato is not a valid number');
         });
 

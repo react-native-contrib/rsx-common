@@ -1,3 +1,5 @@
+'use strict';
+
 const isPackageName = (name) => {
     return !name.match(/^([a-zA-Z_$][a-zA-Z\d_$]*\.)+([a-zA-Z_$][a-zA-Z\d_$]*)$/)
     ? false

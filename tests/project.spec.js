@@ -1,3 +1,5 @@
+'use strict';
+
 const chai = require('chai');
 const sinon = require('sinon');
 const log = require('npmlog');
@@ -13,11 +15,13 @@ describe('project', () => {
     describe('#getPackageJson', () => {
 
         it('should return the package file as a JSON object', () => {
-            expect(projectUtils.getPackageJson(process.cwd()).name).to.deep.equals('rsx-common');
+            let projectPath = path.join(__dirname, 'fixtures', 'react-native-project');
+            expect(projectUtils.getPackageJson(projectPath).name).to.deep.equals('VideoApp');
         });
 
         it('should return an empty array if no package file exists', () => {
-            expect(projectUtils.getPackageJson(path.join(process.cwd(), '..'))).to.deep.equals([]);
+            let nonprojectPath = path.join(__dirname, 'fixtures');
+            expect(projectUtils.getPackageJson(nonprojectPath)).to.deep.equals([]);
         });
 
     });

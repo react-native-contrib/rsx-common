@@ -1,22 +1,23 @@
+'use strict';
+
 const chai = require('chai');
 const sinon = require('sinon');
-const mock = require('mock-require');
+const rewire = require('rewire');
 const path = require('path');
 
 const expect = chai.expect;
-var spawnError = false;
-mock('child_process', {
-    spawn: () => ({
+let spawnError = false;
+let processUtilsMock = rewire('../src/process');
+processUtilsMock.__set__('spawn', () => {
+    return {
         on: (ev, cb) => cb(spawnError),
-    }),
+    };
 });
-
-const processUtils = require('../src/process');
 
 describe('process', () => {
 
     describe('#run', () => {
-        const command = processUtils.run('echo');
+        const command = processUtilsMock.run('echo');
 
         it('should generate a function around shell command', () => {
             expect(typeof command).to.deep.equals('function');

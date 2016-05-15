@@ -1,3 +1,5 @@
+'use strict';
+
 const chai = require('chai');
 const path = require('path');
 
@@ -15,7 +17,7 @@ describe('path', () => {
 
         it('should throw an error for a nonexistent file', () => {
             expect(() => {
-                pathUtils.isFile(path.join(__dirname, 'fixtures', 'nofile.txt'))
+                pathUtils.isFile(path.join(__dirname, 'fixtures', 'nofile.txt'));
             }).to.throw('ENOENT: no such file or directory');
         });
 
@@ -29,7 +31,7 @@ describe('path', () => {
 
         it('should throw an error for a nonexistent directory', () => {
             expect(() => {
-                pathUtils.isDirectory(path.join(__dirname, 'nofixtures'))
+                pathUtils.isDirectory(path.join(__dirname, 'nofixtures'));
             }).to.throw('ENOENT: no such file or directory');
         });
 
@@ -51,5 +53,5 @@ describe('path', () => {
 
     });
 
-})
+});
 
