@@ -1,4 +1,5 @@
 module.exports = {
+    _: require('lodash'),
     log: require('npmlog'),
     chalk: require('chalk'),
     path: require('./src/path'),
