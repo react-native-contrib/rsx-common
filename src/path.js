@@ -1,7 +1,7 @@
 'use strict';
 
-const fs = require('fs');
-const path = require('path');
+let fs = require('fs');
+let path = require('path');
 
 /**
  * Checks if `file` exists and returns `true`, `false` otherwise.

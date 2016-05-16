@@ -1,11 +1,13 @@
 'use strict';
 
-const chai = require('chai');
-const path = require('path');
+let chai = require('chai');
+let rewire = require('rewire');
+let sinon = require('sinon');
+let path = require('path');
 
-const expect = chai.expect;
+let expect = chai.expect;
 
-const pathUtils = require('../src/path');
+let pathUtils = require('../src/path');
 
 describe('path', () => {
 
@@ -39,9 +41,29 @@ describe('path', () => {
 
     describe('#makeDirectory', () => {
 
-        it('should create a directory if none exists');
+        it('should create a directory if none exists', () => {
+            let pathUtilsMock = rewire('../src/path');
+            let stub = sinon.stub().returns(false);
+            pathUtilsMock.__set__('fs', {
+                existsSync: stub,
+                mkdirSync: stub,
+            });
 
-        it('should not create a directory if one exists');
+            pathUtilsMock.makeDirectory(process.cwd());
+            expect(stub.calledTwice).to.deep.equals(true);
+        });
+
+        it('should not create a directory if one exists', () => {
+            let pathUtilsMock = rewire('../src/path');
+            let stub = sinon.stub().returns(true);
+            pathUtilsMock.__set__('fs', {
+                existsSync: stub,
+                mkdirSync: stub,
+            });
+
+            pathUtilsMock.makeDirectory(process.cwd());
+            expect(stub.calledOnce).to.deep.equals(true);
+        });
 
     });
 

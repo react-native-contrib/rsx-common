@@ -1,11 +1,11 @@
 'use strict';
 
-const chai = require('chai');
-const path = require('path');
+let chai = require('chai');
+let path = require('path');
 
-const expect = chai.expect;
+let expect = chai.expect;
 
-const validateUtils = require('../src/validate');
+let validateUtils = require('../src/validate');
 
 describe('validate', () => {
 

@@ -1,7 +1,7 @@
 'use strict';
 
-const path = require('path');
-const log = require('npmlog');
+let path = require('path');
+let log = require('npmlog');
 
 /**
  * Retrieve the `package.json` file from the path provided by `folder`.

@@ -1,14 +1,14 @@
 'use strict';
 
-const chai = require('chai');
-const sinon = require('sinon');
-const log = require('npmlog');
-const path = require('path');
+let chai = require('chai');
+let sinon = require('sinon');
+let log = require('npmlog');
+let path = require('path');
 
-const expect = chai.expect;
+let expect = chai.expect;
 log.level = 'silent';
 
-const projectUtils = require('../src/project');
+let projectUtils = require('../src/project');
 
 describe('project', () => {
 
