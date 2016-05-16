@@ -1,6 +1,6 @@
 {
   "name": "rsx-common",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Common utility functions for the RSX CLI utility",
   "main": "index.js",
   "scripts": {
