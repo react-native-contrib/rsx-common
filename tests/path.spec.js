@@ -14,7 +14,7 @@ describe('path', () => {
     describe('#isFile', () => {
 
         it('should return true for an existing file', () => {
-            expect(pathUtils.isFile(path.join(__dirname, 'fixtures', 'file.txt'))).to.deep.equals(true);
+            expect(pathUtils.isFile(path.join(__dirname, 'fixtures', 'file.txt'))).to.be.true;
         });
 
         it('should throw an error for a nonexistent file', () => {
@@ -28,7 +28,7 @@ describe('path', () => {
     describe('#isDirectory', () => {
 
         it('should return true for an existing directory', () => {
-            expect(pathUtils.isDirectory(path.join(__dirname, 'fixtures'))).to.deep.equals(true);
+            expect(pathUtils.isDirectory(path.join(__dirname, 'fixtures'))).to.be.true;
         });
 
         it('should throw an error for a nonexistent directory', () => {
@@ -50,7 +50,7 @@ describe('path', () => {
             });
 
             pathUtilsMock.makeDirectory(process.cwd());
-            expect(stub.calledTwice).to.deep.equals(true);
+            expect(stub.calledTwice).to.be.true;
         });
 
         it('should not create a directory if one exists', () => {
@@ -62,7 +62,7 @@ describe('path', () => {
             });
 
             pathUtilsMock.makeDirectory(process.cwd());
-            expect(stub.calledOnce).to.deep.equals(true);
+            expect(stub.calledOnce).to.be.true;
         });
 
     });
